@@ -1,0 +1,12 @@
+{{define "registr"}}
+  {{template "header"}}
+  <main class="p-5">
+    <h1 class="lead"><big>Регистрация</big></h1>
+    <form action="/saveUser" method="post">
+        <input type="text" name="name" id="name" placeholder="Введите имя" class="form-control"><br>        
+        <textarea name="password" id="password" class="form-control" placeholder="Введите пароль"></textarea><br>
+        <button class="btn btn-warning">Сохранить</button>
+    </form>
+  </main>
+  {{template "footer"}}
+{{end}}

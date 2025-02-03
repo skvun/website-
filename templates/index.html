@@ -1,0 +1,19 @@
+{{define "index"}}
+  {{template "header"}}
+  <main class="p-5">
+    <hr>
+    <h1 class="lead"><big>Главная страница</big></h1>
+    <hr>
+    {{ range .}}
+    <i>Автор поста:<small>{{.Name}}</small></i>
+    <div class="alert alert-info">
+      <h2>{{.LNFNP}}</h2>
+      <h3>{{.Awards}}</h3>
+      <p><small>{{.MilitaryBackground}}</small></p>
+    </div>
+    {{else}}
+    <p class="lead">Статей нет!</p>
+    {{end}}
+  </main>
+  {{template "footer"}}
+{{end}}
